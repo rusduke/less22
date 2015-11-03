@@ -11,6 +11,10 @@ get '/about' do
 	erb :about
 end
 
+get '/err' do
+	erb :err
+end
+
 get '/visit' do
 	erb :visit
 end
@@ -33,7 +37,11 @@ post '/contacts' do
 	erb :contacts
 	@email = params[:email]
 	@message = params[:message]
-	f = File.open './public/contacts.txt','a'
-	f.write "E-mail: #{@email}, Text #{@message}\n"
+	flag = @email.include? "@"
+	if flag == true 
+		f1 = File.open './public/contacts.txt','a'
+		f1.write "E-mail: #{@email}, Text #{@message}\n"
+	end
+
 	erb :contacts
 end 
