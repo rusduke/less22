@@ -28,3 +28,12 @@ end
 get '/contacts' do
 	erb :contacts
 end
+
+post '/contacts' do
+	erb :contacts
+	@email = params[:email]
+	@message = params[:message]
+	f = File.open './public/contacts.txt','a'
+	f.write "E-mail: #{@email}, Text #{@message}\n"
+	erb :contacts
+end 
