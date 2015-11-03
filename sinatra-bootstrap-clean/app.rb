@@ -24,8 +24,9 @@ post '/visit' do
 	@username = params[:username]
 	@phone = params[:phone]
 	@datetime = params[:datetime]
+	@barber = params[:barber]
 	f = File.open './public/users.txt','a'
-	f.write "User: #{@username}, phone #{@phone}, date & time #{@datetime}\n"
+	f.write "User: #{@username}, phone #{@phone}, date & time #{@datetime}, #{@barber}\n"
 	erb :visit
 end 
 
