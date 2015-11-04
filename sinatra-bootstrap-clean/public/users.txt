@@ -13,3 +13,4 @@ User: sdfsdfsdf, phone 555555555, date & time dfxdf, Крокодил Гена
 User: sdf, phone sdf, date & time test1, 
 User: sdf, phone sdf, date & time test1, 
 User: sdf, phone sdf, date & time test2, ["Old guy"]
+User: Stas, phone 555-55-55, date & time 13.10.2015 23:10, ["Old guy"]
